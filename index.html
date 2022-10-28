@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="staticBackdrop"
+			data-bs-backdrop="static"
+			data-bs-keyboard="false"
+			tabindex="-1"
+			aria-labelledby="staticBackdropLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog" id="modal-container">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div id="login">
+							<div class="d-flex justify-content-end mb-3">
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+							<div
+								class="d-flex justify-content-center align-items-center gap-2 mb-3"
+							>
+								<h1>Login</h1>
+								<img
+									src="public/undraw_access_account_re_8spm.svg"
+									width="80px"
+								/>
+							</div>
+							<form>
+								<div class="mb-2">
+									<label for="exampleInputDomain" class="form-label"
+										>Domain</label
+									>
+									<input
+										type="url"
+										class="form-control border-top-0 border-end-0 border-start-0 py-3"
+										id="exampleInputDomain"
+										aria-describedby="domainHelp"
+										placeholder="Enter your domain"
+									/>
+								</div>
+								<div class="mb-2">
+									<label for="exampleInputEmail1" class="form-label"
+										>Email</label
+									>
+									<input
+										type="email"
+										class="form-control border-top-0 border-end-0 border-start-0 py-3"
+										id="exampleInputEmail1"
+										aria-describedby="emailHelp"
+										placeholder="Enter your email"
+									/>
+								</div>
+								<div class="mb-2">
+									<label for="exampleInputPassword1" class="form-label"
+										>Password</label
+									>
+									<input
+										type="password"
+										placeholder="Enter you password"
+										class="form-control border-top-0 border-end-0 border-start-0 py-3"
+										id="exampleInputPassword1"
+									/>
+								</div>
+								<div class="d-flex justify-content-end mb-5">
+									<a
+										id="forgot-password-link"
+										class="text-primary text-decoration-underline cursor-pointer"
+									>
+										<span>Forgot my password</span>
+									</a>
+								</div>
+
+								<div
+									class="d-flex align-items-center justify-content-evenly mb-5"
+								>
+									<button
+										type="submit"
+										class="btn btn-primary shadow px-5 py-3 w-100"
+									>
+										Sign in
+									</button>
+								</div>
+							</form>
+							<div class="d-flex justify-content-end align-items-center gap-2">
+								<span>Dont have and account?</span>
+								<span class="fw-bold cursor-pointer text-primary"
+									>Register for Free</span
+								>
+							</div>
+						</div>
+
+						<!-- Forgot my password -->
+						<div class="hide pt-4" id="forgot-password">
+							<form>
+								<div class="d-flex flex-column align-items-center gap-2 mb-3">
+									<img
+										src="public/undraw_forgot_password_re_hxwm.svg"
+										width="80px"
+									/>
+									<h4>Forgot my Password</h4>
+								</div>
+								<div class="d-lex align-items-center mb-4 cursor-pointer">
+									<img
+										src="public/arrow-left-svgrepo-com.svg"
+										width="20px"
+										alt=""
+									/>
+									<a id="go-back"> <span class="text-primary">Go back</span></a>
+								</div>
+								<div class="mb-3">
+									<label for="forgotPasswordDomain" class="form-label"
+										>Domain</label
+									>
+									<input
+										type="url"
+										class="form-control border-top-0 border-end-0 border-start-0 py-3"
+										id="forgotPasswordDomain"
+										aria-describedby="domainHelp"
+										placeholder="Enter domain"
+									/>
+								</div>
+								<div class="mb-5">
+									<label for="forgotPasswordEmail1" class="form-label"
+										>Email</label
+									>
+									<input
+										type="email"
+										class="form-control border-top-0 border-end-0 border-start-0 py-3"
+										id="forgotPasswordEmail1"
+										aria-describedby="emailHelp"
+										placeholder="Enter email"
+									/>
+								</div>
+								<div class="d-flex justify-content-end">
+									<button
+										type="submit"
+										class="btn btn-primary shadow py-3 px-2"
+									>
+										Recover Password
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTENT -->
+
+		<div
+			class="container p-3 my-5 rounded d-flex flex-column shadow"
+			id="mobile"
+		>
+			<div class="d-flex justify-content-between">
+				<a class="text-decoration-none cursor-pointer" href="/" id="logo">
+					<h1 class="fs-3">LOGO</h1></a
+				>
+				<div>
+					<a
+						data-bs-toggle="modal"
+						data-bs-target="#staticBackdrop"
+						id="login"
+						class="cursor-pointer"
+					>
+						<img src="public/carbon_user-avatar.svg" width="32px" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+
+		<script>
+			const login = document.querySelector("#login");
+			const forgotPassword = document.querySelector("#forgot-password");
+			const goBackBtn = document.querySelector("#go-back");
+			const forgotPasswordLink = document.querySelector(
+				"#forgot-password-link"
+			);
+
+			forgotPasswordLink.addEventListener("click", () => {
+				login.classList.add("hide");
+				forgotPassword.classList.toggle("hide");
+			});
+
+			goBackBtn.addEventListener("click", () => {
+				forgotPassword.classList.add("hide");
+				login.classList.toggle("hide");
+			});
+		</script>
+	</body>
+</html>

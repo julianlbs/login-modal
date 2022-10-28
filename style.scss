@@ -1,0 +1,22 @@
+#modal-container {
+	width: 370px;
+}
+
+#mobile {
+	width: 370px;
+	height: 896px;
+}
+
+.hide {
+	display: none;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+@media (max-width: 520px) {
+	#modal-container {
+		width: 96%;
+	}
+}
